@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+ 	<script src="https://d3js.org/d3.v4.min.js"></script>
+    <title>1854 cholera epidemic</title>
+    <h1>1854 cholera epidemic</h1>
+    <div id="tooltip">
+        <script>
+        var tooltip = d3.select("tooltip")
+                                    
+        </script>
+    </div>
+    
+</head>
+<body>
+
+    <div id="menu" class="menu">  
+        <a href="pr1.html"style="font-size: 20px">Home</a>
+        <a href="document.html"style="font-size: 20px">Document</a>
+        <a href="https://watch.screencastify.com/v/K7XDJigOsNE8pWwYzQGA"style="font-size: 20px">Video</a>
+        <h1 style="text-decoration: underline;"style="font-size: 20px">Design Process </h1>
+        <p>(done in order from top to bottom)</p>
+        <h2 >Research</h2>
+        <p style="font-size: 20px">To start I first read the material necessary in "An Introduction to Designing with D3" by Scott Murray to understand what is possible within d3.
+          <br>
+          Then I looked at the requirements for this assignment to see what I needed to be add. Once done I decided to start with the map since I consider it to be the most important visual tool for the project.
+        <h2>street map</h2>
+        <p style="font-size: 20px"> I orginally started using d3.lines to make the streets but realized after sometime paths was a much better option.
+          <br>Added labels for street after drawing method was complete.
+          <h2>Timeline bar chart</h2>
+           
+          <p style="font-size: 20px"> Next I made a Timeline bar chart because it would compliment the map.
+          <h2>deathdisplay</h2>
+          <p style="font-size: 20px"> I added a deathdisplay on hover for each bar after creating the graph.
+          <h2>pumps</h2>
+          <p style="font-size: 20px">Once that was made I added in the pumps location to the map so I would have a clear refrence pointplotting to add the deaths.<br>
+          
+          
+          To make sure they were plotted properly I googled the map of 1854 cholera.
+          I looked back at the files I downloaded to understand the format d3 would best respond to when plotting the dots.
+          <h2>Male and Female death points</h2>
+          <p style="font-size: 20px">Now having a better understanding of the map I started to add male and female death points. Adding age group number reference color code after.
+            <br>
+          all colors chosen were made with colorblindness in mine. Meaning they should have a high enough contrast that anyone can see the differnce between them.
+          <h2>interactivity</h2>
+          <p style="font-size: 20px">Once the male and female death points were properly displaying I used svg #mapdeaths to introduce interactivity. <br>
+          Basically stating anytime 
+          a bar inside the timeline graph was hoveredover, delete all circles on the map. Then I added in the circle for each death matching the bar death and age range.
+          <h2>Agedisplay</h2>
+          <p style="font-size: 20px">I also added a hoverover display age range feature after so the users could better understand the dots being plotted.
+          <h2>Legend</h2>  
+          <p style="font-size: 20px">For good note I also added a legend key to the left so users understand what each dot represents.
+          <h2>Age group bar chart</h2> 
+          <p style="font-size: 20px">I added another bar chart at the side displaying deaths by age groups. Added female and male disniction colors and legend afterwords.
+          <h2>Male and Female ratio display</h2> 
+          <p style="font-size: 20px">This was added so the users would have an exact understanding of how much of each sex died in the age group.
+          <h2>Scatterplot</h2> 
+          <p style="font-size: 20px">Lastly, I added a scatterplot to see if there was any correlation between age groups and the amount of deaths that took place.
+          
+        </p>
+      
+
+  
+  <h1 style="text-decoration: underline;">Design Decisions</h1>
+  <h2>Overall</h2>
+        <p style="font-size: 20px">I wanted my design to be simple and straight forward. <br>I wanted users to immediately notice the map and bar graph so I made those the biggest.
+          The side charts were made for a more detailed understanding and are not as important. That is why they are on the side.
+          
+        <h2>street map</h2>
+        <p style="font-size: 20px"> 
+          Made the street and labels black so it would not contrast with the male and female dots being placed on it. 
+          <h2>Timeline bar chart</h2>
+          <p style="font-size: 20px">The reason I choose a bar chart for deaths by date was because I thought it would be the easist way to decipher where the data stands relative to the date.
+          
+          <h2>deathdisplay</h2>
+          <p style="font-size: 20px"> I added a deathdisplay on hover for each bar after creating the graph. Made so users after exact understanding of how many people died on that day.
+          <h2>pumps</h2>
+          <p style="font-size: 20px">Made them larger then the rest of the circles so that they would easily noticable. Also so users can see if pump proximity increased likelyness of death<br>
+          
+         
+          <h2>Male and Female death points</h2>
+          <p style="font-size: 20px">I choose to use purple and blue for my genders but made sure to look up colorblind contrasting colors so colorblindness would not be an issue.
+          <h2>interactivity</h2>
+          <p style="font-size: 20px"> I used hoverover for interactivity between almost all the charts so that users would immedately get the details their looking for without possibly not noticing the details boxfeature.
+          Basically stating anytime <br> I made this bar dark pink so it contrasted all backgrounds it displayed on noticably.
+          
+          <h2>Agedisplay</h2>
+          <p style="font-size: 20px">I gave the hover a background color on the map because it was hard to make out text without one. Also disappearing 
+            
+          <h2>Legend</h2>  
+          <p style="font-size: 20px">The legend was placed right next the map so that users can have a easily noticable reference point when observing the map and its changes.
+          <h2>Age group bar chart</h2> 
+          <p style="font-size: 20px">The reason I choose a bar chart for death by age groups was because I thought it would be the easist way to decipher where the data stands relative to the date or age. 
+          <h2>Male and Female ratio display</h2> 
+          <p style="font-size: 20px">This was added to users would have a better understanding of how much of each sex died in the age group.
+          <h2>Scatterplot</h2> 
+          <p style="font-size: 20px"> Choose blue as the default color so users assume it relates to the time graph because the bars are the same color highlighted.
+ 
+     </p>
+  
+
+  
+  </p>
+  <h1 style="text-decoration: underline;">Findings</h1>
+  <br>
+  <h2>Correlation between Age groups and deaths</h2>
+  <img src="agegroups.JPG" alt="Agegroups">
+  <p style="font-size: 20px">After viewing the age groups charts, 
+    It seems young children (0-10) and the elderly(>80) were most susceptible to the illness. 
+    <br>This is possibly due to weak immune systems young children and the ederly have compared to teen and middle aged people. </p>
+
+  <h2>Cases seem to spike around the beginning of September</h2>
+  <br>
+  <img src="deathdates.JPG" alt="Deaths by date">
+  <p style="font-size: 20px">Cases a very slow to start in mid August but as the beginning of September approches.<br>
+  Espically on Aug 31 where the cases increased by seven times the previous day.
+  <br> Not sure exactly why this happpened. Possibly could of been large social gathering where multiple people drank from the same contaminated pump.
+  <h2>Illness seem to center around Broad Street</h2>
+  <br>
+  <img src="mapdeaths.JPG" alt="Map of deaths taken place over a month on Broad Street">
+  <p style="font-size: 20px">Looking at all the deaths over the past couple weeks, the number of deaths seem to rise the closer you get to Broad Street.
+    <br>
+    This is possibly due to the pump at the center of the street. <br>
+    This pump could be the most contaminated of all, making the illness easily transferable compared to the rest of the pumps in the area. 
+  </p>
+  <p style="font-size: 20px">
+
+  </p>
+</p>
+  <h1>References</h1>
+  <p style="font-size: 20px">
+  1. An Introduction to Designing with D3 by Scott Murray <br>
+  2. https://www.w3schools.com/js/js_graphics_d3js.asp<br>
+  3. https://www.tutorialsteacher.com/d3js/create-bar-chart-using-d3js<br> 
+  4. https://en.wikipedia.org/wiki/1854_Broad_Street_cholera_outbreak
+  5. https://observablehq.com/@d3/learn-d3-interaction
+  6. https://davidmathlogic.com/colorblind/#%23332288-%23117733-%2344AA99-%2388CCEE-%23DDCC77-%23CC6677-%23AA4499-%23882255
+  <br>
+  <br>
+  Also TAs 	
+  Amey Salvi and Ratanond Koonchanok were a big help. Thanks guys!
+  
+  </p>
+        </div>
+        
+      </div>
+</div>
+        
+        
+        </div>
